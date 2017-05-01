@@ -22,6 +22,12 @@
       </div>
     </nav>
 
+<!-- Flash Messages -->
+<% flash.each do |name, message %>
+  <%= content_tag(:div, message, class: "alert alert-info #{name}") %>
+
+
+
     <!-- Page Content -->
     <%= yield %>
     
