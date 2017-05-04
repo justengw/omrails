@@ -8,3 +8,15 @@
     background-position: center center;
     background-size: cover;
 }
+.jumbotron-about {
+    background-image: url(image_path('about-bg.jpg'));
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.jumbotron-contact {
+    background-image: url(image_path('contact-bg.jpg'));
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
