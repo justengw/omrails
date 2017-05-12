@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170508170732) do
+ActiveRecord::Schema.define(version: 20170512122354) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -26,12 +26,24 @@ ActiveRecord::Schema.define(version: 20170508170732) do
     t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
   end
 
-  create_table "tweets", force: :cascade do |t|
+  create_table "patient_profiles", force: :cascade do |t|
+    t.text     "FirstName"
+    t.text     "LastName"
+    t.date     "Birthday"
+    t.text     "Gender"
+    t.boolean  "Self"
+    t.string   "Address"
+    t.string   "Phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "profiles", force: :cascade do |t|
     t.integer  "user_id"
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_tweets_on_user_id"
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

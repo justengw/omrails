@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :patient_profiles
-  resources :tweets
   ActiveAdmin.routes(self)
   devise_for :users
   as :user do
