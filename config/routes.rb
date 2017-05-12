@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :insurances
   resources :patient_profiles
   ActiveAdmin.routes(self)
   devise_for :users
