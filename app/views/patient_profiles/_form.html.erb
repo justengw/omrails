@@ -1,0 +1,52 @@
+<%= form_for(patient_profile) do |f| %>
+  <% if patient_profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(patient_profile.errors.count, "error") %> prohibited this patient_profile from being saved:</h2>
+
+      <ul>
+      <% patient_profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :FirstName %>
+    <%= f.text_field :FirstName %>
+  </div>
+
+  <div class="field">
+    <%= f.label :LastName %>
+    <%= f.text_field :LastName %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Birthday %>
+    <%= f.text_field :Birthday %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Gender %>
+    <%= f.text_field :Gender %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Self %>
+    <%= f.text_field :Self %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Address %>
+    <%= f.text_field :Address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Phone %>
+    <%= f.text_field :Phone %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
