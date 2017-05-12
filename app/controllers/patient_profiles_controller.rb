@@ -1,5 +1,5 @@
 class PatientProfilesController < ApplicationController
-  before_action :set_patient_profile, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /patient_profiles
   # GET /patient_profiles.json
