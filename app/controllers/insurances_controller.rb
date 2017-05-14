@@ -1,5 +1,5 @@
 class InsurancesController < ApplicationController
-  before_action :set_insurance, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /insurances
   # GET /insurances.json
